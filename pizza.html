@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+
+    
+</head>
+<body>
+    <header>
+        <h1>Pizza Order Form</h1>
+    </header>
+    <div>
+        <div id="section1">
+            <form  class="formbox">
+                <div class="pizzasize">
+                    <label>Size:</label>
+                    <input id="pizzasize" type="range" min="1" max="4" value="1" onchange="ChangePizzaSize()"/>
+                    <label id="imglabel">Small 6$</label>
+                    <div class="centerimg">
+                        <img id="pizzaimg" src="https://toppng.com/uploads/preview/pizza-png-11553999379orjd1miyt1.png" />
+                    </div>
+                </div>
+                <fieldset id="meat" >
+                    <legend>Meet Toppings (+2$ for each)</legend>
+                    <input type="checkbox" name="Pepperoni" /> Pepperoni
+                    <br/>
+                    <input type="checkbox" name="Sausage" /> Sausage
+                    <br/>
+                    <input type="checkbox" name="Ground Beaf" /> Ground Beaf
+                    <br/>
+                    <input type="checkbox" name="Anchovy" /> Anchovy
+                    <br/>
+                    <input type="checkbox" name="Chicken" /> Chicken
+                </fieldset>
+                <fieldset id="veg" >
+                    <legend>Veggies (+1$ for each)</legend>
+                    <input type="checkbox" name="Tomatoes" /> Tomatoes
+                    <br/>
+                    <input type="checkbox" name="Onions" /> Onions
+                    <br/>
+                    <input type="checkbox" name="Olives" /> Olives
+                    <br/>
+                    <input type="checkbox" name="Mushrooms" /> Mushrooms
+                    <br/>
+                    <input type="checkbox" name="Pineapple" /> Pineapple
+                    <br/>
+                    <input type="checkbox" name="Spinach" /> Spinach
+                    <br/>
+                    <input type="checkbox" name="Jalapeno" /> Jalapeno
+                </fieldset>
+                <fieldset id="cheese">
+                    <legend>Cheese</legend>
+                    <input type="radio" value="Regular" name="cheese" /> Regular Cheese
+                    <br/>
+                    <input type="radio" value="No" name="cheese" /> No Cheese
+                    <br/>
+                    <input type="radio" value="Extra" name="cheese" /> Extra Cheese
+                </fieldset>
+                <fieldset>
+                    <legend>Payment</legend>
+                    <input type="radio" value="Cash" name="payment" /> Cash
+                    <input type="radio" value="Master Card" name="payment" /> Master Card
+                    <input type="radio" value="Visa" name="payment" /> Visa
+                </fieldset>
+                <button id="page1next" type="button" class="nextbtn" onclick="gotoPage(2)">Next</button>
+            </form>
+        </div>
+        
+        <div id="section2">
+            <form  class="formbox centertext">
+                <div>
+                    <label>First name:</label>
+                    <br/>
+                    <input id="first" type="text" class="inputstyle"/>
+                </div>
+                <div>
+                    <label>Last name:</label>
+                    <br/>
+                    <input id="last" type="text" class="inputstyle"/>
+                </div>
+                <div>
+                    <label>E-mail:"</label>
+                    <br/>
+                    <input id="mail" type="email" class="inputstyle"/>
+                </div>
+                <div>
+                    <label>Phone Number:</label>
+                    <br/>
+                    <input id="phone" type="text" class="inputstyle"/>
+                </div>
+                <div>
+                    <label>City:</label>
+                    <br/>
+                    <select id="country" class="inputstyle">
+                            <option></option>
+                            <option selected disabled>--Please choose an option--</option>
+                            <option>Beirut</option>
+                            <option>Tyre</option>
+                            <option>Saida</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Address:</label>
+                    <br/>
+                    <textarea rows="4" cols="117" id="address"></textarea>
+                </div>
+                <button id="page2back" type="button" class="nextbtn" onclick="gotoPage(1)">Back</button>
+                <button id="page1next" type="button" class="nextbtn" onclick="checkInfo(); fillSummary()">Next</button>
+            </form>
+        </div>
+        
+        <div id="OrderSummary">
+            <h1>Order Summary</h1>
+            <h2>Deliver to</h2>
+            <p id="dlvrTo"></p>
+            <h2>Order</h2>
+            <ul id="orderList"></ul>
+            <h2 id="total">Total</h2>
+            <button id="page3back" type="submit" onclick="gotoPage(2)">Back</button>
+        </div>           
+    </div>
+    <script src="myscripts.js"></script>
+</body>
+</html>

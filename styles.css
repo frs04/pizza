@@ -1,0 +1,73 @@
+body{
+    background-color: #01dddd;
+}
+
+h1{
+    text-align: center;
+}
+
+.formbox{
+    padding: 10px;
+    margin: 40px;
+}
+
+.pizzasize{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+fieldset{
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.formbox img{
+    width: 100px;
+}
+
+.centerimg{
+    text-align: center;
+}
+
+.inputstyle{
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    border: 0;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+.centertext{
+    margin: 0 300px;
+}
+
+textarea{
+    border-radius: 5px;
+    border: 0;
+    margin-top: 10px;
+}
+
+#OrderSummary{
+    width: 50vw;
+    margin-left: 25vw;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: green;
+    border-style: solid;
+    border-width: thick;
+    background-color: #ffffff;
+}
+
+#section1{
+    display: block;
+}
+#section2, #OrderSummary{
+    display: none;
+}
+
+.nextbtn{
+    margin-top: 20px;
+}
